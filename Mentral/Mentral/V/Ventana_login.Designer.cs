@@ -140,21 +140,22 @@
             // registrarse
             // 
             this.registrarse.AutoSize = true;
-            this.registrarse.Font = new System.Drawing.Font("TradeMark Demo", 11F);
+            this.registrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.registrarse.LinkColor = System.Drawing.SystemColors.MenuHighlight;
-            this.registrarse.Location = new System.Drawing.Point(209, 425);
+            this.registrarse.Location = new System.Drawing.Point(198, 425);
             this.registrarse.Name = "registrarse";
-            this.registrarse.Size = new System.Drawing.Size(82, 29);
+            this.registrarse.Size = new System.Drawing.Size(104, 24);
             this.registrarse.TabIndex = 0;
             this.registrarse.TabStop = true;
             this.registrarse.Text = "Registrarse";
+            
             this.registrarse.Click += new System.EventHandler(this.Registrarse_Click);
             // 
             // boton_ingresar
             // 
             this.boton_ingresar.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.boton_ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_ingresar.Font = new System.Drawing.Font("TradeMark Demo", 15F);
+            this.boton_ingresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.boton_ingresar.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.boton_ingresar.Location = new System.Drawing.Point(145, 370);
             this.boton_ingresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -193,12 +194,12 @@
             // 
             this.texto_contraseña.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.texto_contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.texto_contraseña.Font = new System.Drawing.Font("TradeMark Demo", 15F);
+            this.texto_contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.texto_contraseña.ForeColor = System.Drawing.Color.AliceBlue;
             this.texto_contraseña.Location = new System.Drawing.Point(117, 247);
             this.texto_contraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.texto_contraseña.Name = "texto_contraseña";
-            this.texto_contraseña.Size = new System.Drawing.Size(276, 39);
+            this.texto_contraseña.Size = new System.Drawing.Size(276, 29);
             this.texto_contraseña.TabIndex = 2;
             this.texto_contraseña.Text = "Contraseña";
             this.texto_contraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -209,12 +210,12 @@
             // 
             this.texto_rut.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.texto_rut.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.texto_rut.Font = new System.Drawing.Font("TradeMark Demo", 15F);
+            this.texto_rut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.texto_rut.ForeColor = System.Drawing.Color.AliceBlue;
             this.texto_rut.Location = new System.Drawing.Point(117, 192);
             this.texto_rut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.texto_rut.Name = "texto_rut";
-            this.texto_rut.Size = new System.Drawing.Size(276, 39);
+            this.texto_rut.Size = new System.Drawing.Size(276, 29);
             this.texto_rut.TabIndex = 1;
             this.texto_rut.Text = "Rut";
             this.texto_rut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

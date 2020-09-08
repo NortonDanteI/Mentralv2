@@ -36,80 +36,16 @@ namespace Mentral.C
                 return false;
             }
         }
-        public static Boolean Validar_primer_nombre(string texto) {
-            Regex regular = new Regex(@"[a-zA-ZñÑ\s]{2,50}");
-            if (regular.IsMatch(texto)&& (texto!="Primer nombre"))
-            {
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("El primer nombre no es valido.");
-                return false;
-            }
-        }
-        public static Boolean Validar_segundo_nombre(string texto)
+        
+        public static Boolean Validar_nombre(string texto)
         {
-            Regex regular = new Regex(@"[a-zA-ZñÑ\s]{2,50}");
-            if (regular.IsMatch(texto) && (texto != "Segundo nombre"))
+            if (texto.Length > 3 && texto.Contains(".") != true && texto != "Ingrese nombre")
             {
                 return true;
+
             }
             else
             {
-                MessageBox.Show("El segundo nombre no es valido.");
-                return false;
-            }
-        }
-        public static Boolean Validar_apellido_paterno(string texto)
-        {
-            Regex regular = new Regex(@"[a-zA-ZñÑ\s]{2,50}");
-            if (regular.IsMatch(texto) && (texto != "Apellido paterno"))
-            {
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("El apellido paterno no es valido.");
-                return false;
-            }
-        }
-        public static Boolean Validar_apellido_materno(string texto)
-        {
-            Regex regular = new Regex(@"[a-zA-ZñÑ\s]{2,50}");
-            if (regular.IsMatch(texto) && (texto != "Apellido materno"))
-            {
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("El apellido materno no es valido.");
-                return false;
-            }
-        }
-        public static Boolean Validar_institucion_educativa(string texto)
-        {
-            Regex regular = new Regex(@"[a-zA-ZñÑ\s]{3,50}");
-            if (regular.IsMatch(texto) && (texto != "Institución educativa"))
-            {
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("La institución educativa no es valida.");
-                return false;
-            }
-        }
-        public static Boolean Validar_carrera(string texto)
-        {
-            Regex regular = new Regex(@"[a-zA-ZñÑ\s]{4,50}");
-            if (regular.IsMatch(texto) && (texto != "Carrera"))
-            {
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("La carrera no es valida.");
                 return false;
             }
         }
@@ -123,6 +59,55 @@ namespace Mentral.C
             else
             {
                 MessageBox.Show("El correo esta mal escrito.");
+                return false;
+            }
+        }
+
+        public static Boolean Validar_seccion(string texto)
+        {
+            if (texto.Length > 10 && texto != "Ingrese sección" && texto != "Ingrese sección a modificar" && texto != "Ingrese el cambio de sección")
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static Boolean Validar_trastorno(string texto)
+        {
+            if (texto.Length>10 && texto!= "Ingrese trastorno" && texto != "Ingrese trastorno a modificar" && texto != "Ingrese el cambio de trastorno")
+            {
+                return true;
+                
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static Boolean Validar_pregunta(string texto)
+        {
+            if (texto.Length > 10  && texto != "Ingrese pregunta" && texto != "Ingrese pregunta modificar" && texto != "Ingrese el cambio de pregunta")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static Boolean Validar_respuesta(string texto)
+        {
+            if (texto.Length > 10 && texto != "Ingrese respuesta" && texto != "Ingrese respuesta a modificar" && texto != "Ingrese el cambio de respuesta" && texto != "alternativa")
+            {
+                return true;
+            }
+            else
+            {
                 return false;
             }
         }

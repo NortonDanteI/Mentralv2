@@ -34,20 +34,19 @@
             this.boton_cerrar = new System.Windows.Forms.PictureBox();
             this.rut = new System.Windows.Forms.TextBox();
             this.contraseña = new System.Windows.Forms.TextBox();
-            this.primer_nombre = new System.Windows.Forms.TextBox();
-            this.segundo_nombre = new System.Windows.Forms.TextBox();
-            this.apellido_paterno = new System.Windows.Forms.TextBox();
-            this.apellido_materno = new System.Windows.Forms.TextBox();
-            this.institucion_educativa = new System.Windows.Forms.TextBox();
-            this.carrera = new System.Windows.Forms.TextBox();
+            this.nombre = new System.Windows.Forms.TextBox();
+            this.correo_electronico = new System.Windows.Forms.TextBox();
             this.boton_registrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.estudiante = new System.Windows.Forms.RadioButton();
+            this.experto = new System.Windows.Forms.RadioButton();
             this.icono_registrate = new System.Windows.Forms.PictureBox();
-            this.correo_electronico = new System.Windows.Forms.TextBox();
             this.Barratitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boton_minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boton_cerrar)).BeginInit();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icono_registrate)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,13 +95,13 @@
             // 
             this.rut.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.rut.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rut.Font = new System.Drawing.Font("TradeMark Demo", 15F);
+            this.rut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rut.ForeColor = System.Drawing.Color.AliceBlue;
             this.rut.Location = new System.Drawing.Point(27, 145);
             this.rut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rut.Name = "rut";
-            this.rut.Size = new System.Drawing.Size(225, 39);
-            this.rut.TabIndex = 0;
+            this.rut.Size = new System.Drawing.Size(225, 29);
+            this.rut.TabIndex = 1;
             this.rut.Text = "Rut";
             this.rut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.rut.Enter += new System.EventHandler(this.Rut_Enter);
@@ -112,121 +111,57 @@
             // 
             this.contraseña.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contraseña.Font = new System.Drawing.Font("TradeMark Demo", 15F);
+            this.contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.contraseña.ForeColor = System.Drawing.Color.AliceBlue;
             this.contraseña.Location = new System.Drawing.Point(268, 145);
             this.contraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.contraseña.Name = "contraseña";
-            this.contraseña.Size = new System.Drawing.Size(255, 39);
-            this.contraseña.TabIndex = 1;
+            this.contraseña.Size = new System.Drawing.Size(255, 29);
+            this.contraseña.TabIndex = 2;
             this.contraseña.Text = "Contraseña";
             this.contraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.contraseña.Enter += new System.EventHandler(this.Contraseña_Enter);
             this.contraseña.Leave += new System.EventHandler(this.Contraseña_Leave);
             // 
-            // primer_nombre
+            // nombre
             // 
-            this.primer_nombre.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.primer_nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.primer_nombre.Font = new System.Drawing.Font("TradeMark Demo", 15F);
-            this.primer_nombre.ForeColor = System.Drawing.Color.AliceBlue;
-            this.primer_nombre.Location = new System.Drawing.Point(27, 199);
-            this.primer_nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.primer_nombre.Name = "primer_nombre";
-            this.primer_nombre.Size = new System.Drawing.Size(225, 39);
-            this.primer_nombre.TabIndex = 2;
-            this.primer_nombre.Text = "Primer nombre";
-            this.primer_nombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.primer_nombre.Enter += new System.EventHandler(this.Primer_nombre_Enter);
-            this.primer_nombre.Leave += new System.EventHandler(this.Primer_nombre_Leave);
+            this.nombre.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.nombre.ForeColor = System.Drawing.Color.AliceBlue;
+            this.nombre.Location = new System.Drawing.Point(27, 197);
+            this.nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nombre.Name = "nombre";
+            this.nombre.Size = new System.Drawing.Size(496, 29);
+            this.nombre.TabIndex = 3;
+            this.nombre.Text = "Nombre";
+            this.nombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nombre.Enter += new System.EventHandler(this.Nombre_Enter);
+            this.nombre.Leave += new System.EventHandler(this.Nombre_Leave);
             // 
-            // segundo_nombre
+            // correo_electronico
             // 
-            this.segundo_nombre.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.segundo_nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.segundo_nombre.Font = new System.Drawing.Font("TradeMark Demo", 15F);
-            this.segundo_nombre.ForeColor = System.Drawing.Color.AliceBlue;
-            this.segundo_nombre.Location = new System.Drawing.Point(268, 199);
-            this.segundo_nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.segundo_nombre.Name = "segundo_nombre";
-            this.segundo_nombre.Size = new System.Drawing.Size(255, 39);
-            this.segundo_nombre.TabIndex = 3;
-            this.segundo_nombre.Text = "Segundo nombre";
-            this.segundo_nombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.segundo_nombre.Enter += new System.EventHandler(this.Segundo_nombre_Enter);
-            this.segundo_nombre.Leave += new System.EventHandler(this.Segundo_nombre_Leave);
-            // 
-            // apellido_paterno
-            // 
-            this.apellido_paterno.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.apellido_paterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.apellido_paterno.Font = new System.Drawing.Font("TradeMark Demo", 15F);
-            this.apellido_paterno.ForeColor = System.Drawing.Color.AliceBlue;
-            this.apellido_paterno.Location = new System.Drawing.Point(27, 253);
-            this.apellido_paterno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.apellido_paterno.Name = "apellido_paterno";
-            this.apellido_paterno.Size = new System.Drawing.Size(225, 39);
-            this.apellido_paterno.TabIndex = 4;
-            this.apellido_paterno.Text = "Apellido paterno";
-            this.apellido_paterno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.apellido_paterno.Enter += new System.EventHandler(this.Apellido_paterno_Enter);
-            this.apellido_paterno.Leave += new System.EventHandler(this.Apellido_paterno_Leave);
-            // 
-            // apellido_materno
-            // 
-            this.apellido_materno.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.apellido_materno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.apellido_materno.Font = new System.Drawing.Font("TradeMark Demo", 15F);
-            this.apellido_materno.ForeColor = System.Drawing.Color.AliceBlue;
-            this.apellido_materno.Location = new System.Drawing.Point(268, 253);
-            this.apellido_materno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.apellido_materno.Name = "apellido_materno";
-            this.apellido_materno.Size = new System.Drawing.Size(255, 39);
-            this.apellido_materno.TabIndex = 5;
-            this.apellido_materno.Text = "Apellido materno";
-            this.apellido_materno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.apellido_materno.Enter += new System.EventHandler(this.Apellido_materno_Enter);
-            this.apellido_materno.Leave += new System.EventHandler(this.Apellido_materno_Leave);
-            // 
-            // institucion_educativa
-            // 
-            this.institucion_educativa.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.institucion_educativa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.institucion_educativa.Font = new System.Drawing.Font("TradeMark Demo", 15F);
-            this.institucion_educativa.ForeColor = System.Drawing.Color.AliceBlue;
-            this.institucion_educativa.Location = new System.Drawing.Point(27, 307);
-            this.institucion_educativa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.institucion_educativa.Name = "institucion_educativa";
-            this.institucion_educativa.Size = new System.Drawing.Size(496, 39);
-            this.institucion_educativa.TabIndex = 6;
-            this.institucion_educativa.Text = "Institución educativa";
-            this.institucion_educativa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.institucion_educativa.Enter += new System.EventHandler(this.Institucion_educativa_Enter);
-            this.institucion_educativa.Leave += new System.EventHandler(this.Institucion_educativa_Leave);
-            // 
-            // carrera
-            // 
-            this.carrera.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.carrera.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.carrera.Font = new System.Drawing.Font("TradeMark Demo", 15F);
-            this.carrera.ForeColor = System.Drawing.Color.AliceBlue;
-            this.carrera.Location = new System.Drawing.Point(27, 361);
-            this.carrera.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.carrera.Name = "carrera";
-            this.carrera.Size = new System.Drawing.Size(496, 39);
-            this.carrera.TabIndex = 7;
-            this.carrera.Text = "Carrera";
-            this.carrera.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.carrera.Enter += new System.EventHandler(this.Carrera_Enter);
-            this.carrera.Leave += new System.EventHandler(this.Carrera_Leave);
+            this.correo_electronico.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.correo_electronico.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.correo_electronico.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.correo_electronico.ForeColor = System.Drawing.Color.AliceBlue;
+            this.correo_electronico.Location = new System.Drawing.Point(27, 253);
+            this.correo_electronico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.correo_electronico.Name = "correo_electronico";
+            this.correo_electronico.Size = new System.Drawing.Size(496, 29);
+            this.correo_electronico.TabIndex = 4;
+            this.correo_electronico.Text = "Correo electrónico";
+            this.correo_electronico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.correo_electronico.Enter += new System.EventHandler(this.Correo_electronico_Enter);
+            this.correo_electronico.Leave += new System.EventHandler(this.Correo_electronico_Leave);
             // 
             // boton_registrar
             // 
             this.boton_registrar.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.boton_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_registrar.Font = new System.Drawing.Font("TradeMark Demo", 15F);
+            this.boton_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.boton_registrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.boton_registrar.Location = new System.Drawing.Point(171, 484);
+            this.boton_registrar.Location = new System.Drawing.Point(153, 383);
             this.boton_registrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.boton_registrar.Name = "boton_registrar";
             this.boton_registrar.Size = new System.Drawing.Size(201, 50);
@@ -238,22 +173,52 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.icono_registrate);
-            this.panel1.Controls.Add(this.correo_electronico);
-            this.panel1.Controls.Add(this.boton_registrar);
-            this.panel1.Controls.Add(this.primer_nombre);
-            this.panel1.Controls.Add(this.carrera);
-            this.panel1.Controls.Add(this.apellido_paterno);
-            this.panel1.Controls.Add(this.apellido_materno);
-            this.panel1.Controls.Add(this.institucion_educativa);
-            this.panel1.Controls.Add(this.segundo_nombre);
             this.panel1.Controls.Add(this.rut);
             this.panel1.Controls.Add(this.contraseña);
+            this.panel1.Controls.Add(this.nombre);
+            this.panel1.Controls.Add(this.correo_electronico);
+            this.panel1.Controls.Add(this.boton_registrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(552, 571);
+            this.panel1.Size = new System.Drawing.Size(552, 466);
             this.panel1.TabIndex = 12;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.estudiante);
+            this.groupBox1.Controls.Add(this.experto);
+            this.groupBox1.Location = new System.Drawing.Point(90, 302);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(368, 61);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            // 
+            // estudiante
+            // 
+            this.estudiante.AutoSize = true;
+            this.estudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estudiante.Location = new System.Drawing.Point(21, 21);
+            this.estudiante.Name = "estudiante";
+            this.estudiante.Size = new System.Drawing.Size(109, 24);
+            this.estudiante.TabIndex = 11;
+            this.estudiante.TabStop = true;
+            this.estudiante.Text = "Estudiante";
+            this.estudiante.UseVisualStyleBackColor = true;
+            // 
+            // experto
+            // 
+            this.experto.AutoSize = true;
+            this.experto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.experto.Location = new System.Drawing.Point(238, 21);
+            this.experto.Name = "experto";
+            this.experto.Size = new System.Drawing.Size(87, 24);
+            this.experto.TabIndex = 12;
+            this.experto.TabStop = true;
+            this.experto.Text = "Experto";
+            this.experto.UseVisualStyleBackColor = true;
             // 
             // icono_registrate
             // 
@@ -265,27 +230,11 @@
             this.icono_registrate.TabIndex = 10;
             this.icono_registrate.TabStop = false;
             // 
-            // correo_electronico
-            // 
-            this.correo_electronico.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.correo_electronico.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.correo_electronico.Font = new System.Drawing.Font("TradeMark Demo", 15F);
-            this.correo_electronico.ForeColor = System.Drawing.Color.AliceBlue;
-            this.correo_electronico.Location = new System.Drawing.Point(27, 415);
-            this.correo_electronico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.correo_electronico.Name = "correo_electronico";
-            this.correo_electronico.Size = new System.Drawing.Size(496, 39);
-            this.correo_electronico.TabIndex = 8;
-            this.correo_electronico.Text = "Correo electrónico";
-            this.correo_electronico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.correo_electronico.Enter += new System.EventHandler(this.Correo_electronico_Enter);
-            this.correo_electronico.Leave += new System.EventHandler(this.Correo_electronico_Leave);
-            // 
             // Ventana_registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 571);
+            this.ClientSize = new System.Drawing.Size(552, 466);
             this.Controls.Add(this.Barratitulo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -297,6 +246,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.boton_cerrar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icono_registrate)).EndInit();
             this.ResumeLayout(false);
 
@@ -309,15 +260,13 @@
         private System.Windows.Forms.PictureBox boton_cerrar;
         private System.Windows.Forms.TextBox rut;
         private System.Windows.Forms.TextBox contraseña;
-        private System.Windows.Forms.TextBox primer_nombre;
-        private System.Windows.Forms.TextBox segundo_nombre;
-        private System.Windows.Forms.TextBox apellido_paterno;
-        private System.Windows.Forms.TextBox apellido_materno;
-        private System.Windows.Forms.TextBox institucion_educativa;
-        private System.Windows.Forms.TextBox carrera;
-        private System.Windows.Forms.Button boton_registrar;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox nombre;
         private System.Windows.Forms.TextBox correo_electronico;
+        private System.Windows.Forms.Button boton_registrar;
+        private System.Windows.Forms.Panel panel1;      
         private System.Windows.Forms.PictureBox icono_registrate;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton estudiante;
+        private System.Windows.Forms.RadioButton experto;
     }
 }

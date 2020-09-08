@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 70);
+            this.panel1.Size = new System.Drawing.Size(1194, 70);
             this.panel1.TabIndex = 0;
             // 
             // logo
@@ -81,7 +81,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 69);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 431);
+            this.panel2.Size = new System.Drawing.Size(1194, 431);
             this.panel2.TabIndex = 1;
             // 
             // gif2
@@ -109,10 +109,10 @@
             // nombre_usuario
             // 
             this.nombre_usuario.AutoSize = true;
-            this.nombre_usuario.Font = new System.Drawing.Font("TradeMark Demo", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombre_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombre_usuario.Location = new System.Drawing.Point(576, 120);
             this.nombre_usuario.Name = "nombre_usuario";
-            this.nombre_usuario.Size = new System.Drawing.Size(298, 60);
+            this.nombre_usuario.Size = new System.Drawing.Size(359, 46);
             this.nombre_usuario.TabIndex = 3;
             this.nombre_usuario.Text = "Nombre de usuario";
             // 
@@ -120,10 +120,10 @@
             // 
             this.bienvenida.AutoSize = true;
             this.bienvenida.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bienvenida.Font = new System.Drawing.Font("meatloaf", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bienvenida.Location = new System.Drawing.Point(411, 0);
             this.bienvenida.Name = "bienvenida";
-            this.bienvenida.Size = new System.Drawing.Size(542, 120);
+            this.bienvenida.Size = new System.Drawing.Size(753, 135);
             this.bienvenida.TabIndex = 2;
             this.bienvenida.Text = "Bienvenida/o";
             // 
@@ -187,7 +187,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.ClientSize = new System.Drawing.Size(1194, 500);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -20,14 +20,6 @@ namespace Mentral.V
             InitializeComponent();
             this.CenterToScreen();
         }
-
-        /*Este codigo es para poder desplazar paneles, el DllImport funciona en tiempo de ejecución*/
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        /*Mando el mensaje con las coordenadas*/
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
         #region Eventos
         private void Texto_contraseña_Enter(object sender, EventArgs e)
         {
@@ -53,11 +45,6 @@ namespace Mentral.V
         {
             MessageBox.Show("Todos los derechos reservados a Norton Irarrázabal");
         }
-        private void Barratitulo_MouseMove(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
 
         private void Boton_cerrar_Click(object sender, EventArgs e)
         {
@@ -68,24 +55,28 @@ namespace Mentral.V
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        #endregion
 
-        private void Boton_ingresar_Click(object sender, EventArgs e)
-        {
-            if (texto_rut.Text != "Rut" && texto_contraseña.Text != "Contraseña")
-            {
+        private void Boton_ingresar_Click(object sender, EventArgs e){
+            if (texto_rut.Text != "Rut" && texto_contraseña.Text != "Contraseña"){
                 Usuario usuario = new Usuario();
-                Boolean valido = usuario.Logear(texto_rut.Text, texto_contraseña.Text);
-                if (valido == true)
-                {
-                    this.Hide();
-                    Ventana_bienvenida ventana_bienvenida_1 = new Ventana_bienvenida();
-                    ventana_bienvenida_1.ShowDialog();
-
-                    Ventana_principal ventana_principal_1 = new Ventana_principal();
-                    ventana_principal_1.Show();
-                    ventana_principal_1.FormClosed += Salir;
-             
+                if (usuario.Logear(texto_rut.Text, texto_contraseña.Text)) {
+                    this.Hide();     
+                    if (Usuario.Tipo =="Estudiante") {
+                        Motor_de_inferencia.Generar_estructura();
+                        Motor_de_inferencia.Fuzzificar_estructura();
+                        Ventana_bienvenida ventana_bienvenida_1 = new Ventana_bienvenida();
+                        ventana_bienvenida_1.ShowDialog();
+                        Ventana_estudiante ventana_principal_1 = new Ventana_estudiante();
+                        ventana_principal_1.Show();
+                        ventana_principal_1.FormClosed += Salir;
+                    }
+                    if (Usuario.Tipo == "Experto") {
+                        Ventana_bienvenida ventana_bienvenida_1 = new Ventana_bienvenida();
+                        ventana_bienvenida_1.ShowDialog();
+                        Ventana_experto ventana_principal_2 = new Ventana_experto();
+                        ventana_principal_2.Show();
+                        ventana_principal_2.FormClosed += Salir;
+                    }
                 }
                 else {
                     MessageBox.Show("Credenciales no validas");
@@ -131,5 +122,21 @@ namespace Mentral.V
                 texto_rut.ForeColor = Color.AliceBlue;
             }
         }
+        int posY = 0;
+        int posX = 0;
+
+        private void Barratitulo_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+            }
+            else {
+                Left += (e.X - posX);
+                Top += (e.Y - posY);
+            }
+        }
+        #endregion
     }
 }

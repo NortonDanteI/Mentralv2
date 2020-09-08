@@ -470,4 +470,23 @@
         RK5CYII=
 </value>
   </data>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>
+
+       Bienvenido a Mentral en el siguiente apartado le describiremos cada uno de 
+       los botones que le serán de utilidad durante el uso del software:
+
+               o Perfil: Se muestran sus datos básicos siendo capaz de realizar el 
+                  cambio de estos. Sin embargo, para que los cambios se lleven a 
+                  cabo debe presionar en modificar.
+
+               o Ver desempeño: Le mostrará contenidos completados, contenidos 
+                  no completados, porcentaje de error por contenido, porcentaje de 
+                  asertividad por contenido, gráfico de asertividad según segmento 
+                  de fecha seleccionado.
+
+               o Comenzar estudio: Al seleccionar este botón le permitirá comenzar 
+                  la actividad de estudio junto a su tutor y acompañante inteligente.
+</value>
+  </data>
 </root>

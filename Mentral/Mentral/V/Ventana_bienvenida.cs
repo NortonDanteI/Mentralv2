@@ -19,14 +19,6 @@ namespace Mentral.V
             InitializeComponent();
             this.CenterToScreen();
         }
-
-        /*Este codigo es para poder desplazar paneles, el DllImport funciona en tiempo de ejecución*/
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        /*Mando el mensaje con las coordenadas*/
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
         private void Timer1_Tick(object sender, EventArgs e)
         {
             if (this.Opacity < 1) this.Opacity += 0.05;
@@ -52,7 +44,7 @@ namespace Mentral.V
 
         private void Ventana_bienvenida_Load_1(object sender, EventArgs e)
         {
-            nombre_usuario.Text = Estudiante.Nombre_pila;
+            nombre_usuario.Text = Usuario.Nombre;
             this.Opacity = 0.0;
             circularProgressBar1.Value = 0;
             circularProgressBar1.Minimum = 0;

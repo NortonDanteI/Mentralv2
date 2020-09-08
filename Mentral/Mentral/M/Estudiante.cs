@@ -9,23 +9,15 @@ namespace Mentral.M
 {
     class Estudiante : Usuario
     {
-        private static string institucion_educativa;
-        private static string carrera;
-
-        public static string Institucion_educativa { get => institucion_educativa; set => institucion_educativa = value; }
-        public static string Carrera { get => carrera; set => carrera = value; }
-
         /*constructores*/
-        public Estudiante(String rut, String nombre_pila, String segundo_nombre, String apellido_paterno, String apellido_materno, String institucion_educativa, String carrera, String correo)
+        public Estudiante(String rut,String contraseña, String nombre, String correo, String conexion,String tipo)
         {
             Rut = rut;
-            Nombre_pila = nombre_pila;
-            Segundo_nombre = segundo_nombre;
-            Apellido_paterno = apellido_paterno;
-            Apellido_materno = apellido_materno;
+            Contraseña = contraseña;
+            Nombre = nombre;
             Correo = correo;
-            Institucion_educativa = institucion_educativa;
-            Carrera = carrera;
+            Conexion = conexion;
+            Tipo = tipo;
         }
 
         /*Metodos*/

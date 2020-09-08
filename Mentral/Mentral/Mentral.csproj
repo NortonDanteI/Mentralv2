@@ -57,10 +57,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="C\Encriptar.cs" />
+    <Compile Include="C\Fuzzy.cs" />
     <Compile Include="C\Validar.cs" />
+    <Compile Include="M\Arbol.cs" />
     <Compile Include="M\Conexion_a_la_bd.cs" />
-    <Compile Include="M\Configuracion.cs" />
-    <Compile Include="M\Docente.cs" />
+    <Compile Include="M\Motor_de_inferencia.cs" />
+    <Compile Include="M\Nodo.cs" />
+    <Compile Include="M\SeleccionCache.cs" />
+    <Compile Include="M\Agente_Docente.cs" />
+    <Compile Include="M\Experto.cs" />
     <Compile Include="M\Estudiante.cs" />
     <Compile Include="M\Usuario.cs" />
     <Compile Include="V\Ventana_bienvenida.cs">
@@ -69,17 +74,35 @@
     <Compile Include="V\Ventana_bienvenida.Designer.cs">
       <DependentUpon>Ventana_bienvenida.cs</DependentUpon>
     </Compile>
-    <Compile Include="V\Ventana_configuracion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="V\Ventana_configuracion.Designer.cs">
-      <DependentUpon>Ventana_configuracion.cs</DependentUpon>
-    </Compile>
     <Compile Include="V\Ventana_desempeño.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="V\Ventana_desempeño.Designer.cs">
       <DependentUpon>Ventana_desempeño.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\Ventana_incorporar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\Ventana_incorporar.Designer.cs">
+      <DependentUpon>Ventana_incorporar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\Ventana_manual_experto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\Ventana_manual_experto.Designer.cs">
+      <DependentUpon>Ventana_manual_experto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\Ventana_ver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\Ventana_ver.Designer.cs">
+      <DependentUpon>Ventana_ver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\Ventana_modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\Ventana_modificar.Designer.cs">
+      <DependentUpon>Ventana_modificar.cs</DependentUpon>
     </Compile>
     <Compile Include="V\Ventana_manual_usuario.cs">
       <SubType>Form</SubType>
@@ -87,17 +110,23 @@
     <Compile Include="V\Ventana_manual_usuario.Designer.cs">
       <DependentUpon>Ventana_manual_usuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="V\Ventana_perfil.cs">
+    <Compile Include="V\Ventana_perfil_usuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="V\Ventana_perfil.Designer.cs">
-      <DependentUpon>Ventana_perfil.cs</DependentUpon>
+    <Compile Include="V\Ventana_perfil_usuario.Designer.cs">
+      <DependentUpon>Ventana_perfil_usuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="V\Ventana_principal.cs">
+    <Compile Include="V\Ventana_experto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="V\Ventana_principal.Designer.cs">
-      <DependentUpon>Ventana_principal.cs</DependentUpon>
+    <Compile Include="V\Ventana_experto.Designer.cs">
+      <DependentUpon>Ventana_experto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\Ventana_estudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\Ventana_estudiante.Designer.cs">
+      <DependentUpon>Ventana_estudiante.cs</DependentUpon>
     </Compile>
     <Compile Include="V\Ventana_login.cs">
       <SubType>Form</SubType>
@@ -113,17 +142,14 @@
     <Compile Include="V\Ventana_registro.Designer.cs">
       <DependentUpon>Ventana_registro.cs</DependentUpon>
     </Compile>
-    <Compile Include="V\Ventana_responder_cuestionario.cs">
+    <Compile Include="V\Ventana_comenzar_estudio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="V\Ventana_responder_cuestionario.Designer.cs">
-      <DependentUpon>Ventana_responder_cuestionario.cs</DependentUpon>
+    <Compile Include="V\Ventana_comenzar_estudio.Designer.cs">
+      <DependentUpon>Ventana_comenzar_estudio.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="V\Ventana_bienvenida.resx">
       <DependentUpon>Ventana_bienvenida.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="V\Ventana_configuracion.resx">
-      <DependentUpon>Ventana_configuracion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V\Ventana_desempeño.resx">
       <DependentUpon>Ventana_desempeño.cs</DependentUpon>
@@ -140,20 +166,35 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="V\Ventana_incorporar.resx">
+      <DependentUpon>Ventana_incorporar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\Ventana_manual_experto.resx">
+      <DependentUpon>Ventana_manual_experto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\Ventana_ver.resx">
+      <DependentUpon>Ventana_ver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\Ventana_modificar.resx">
+      <DependentUpon>Ventana_modificar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="V\Ventana_manual_usuario.resx">
       <DependentUpon>Ventana_manual_usuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="V\Ventana_perfil.resx">
-      <DependentUpon>Ventana_perfil.cs</DependentUpon>
+    <EmbeddedResource Include="V\Ventana_perfil_usuario.resx">
+      <DependentUpon>Ventana_perfil_usuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="V\Ventana_principal.resx">
-      <DependentUpon>Ventana_principal.cs</DependentUpon>
+    <EmbeddedResource Include="V\Ventana_experto.resx">
+      <DependentUpon>Ventana_experto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\Ventana_estudiante.resx">
+      <DependentUpon>Ventana_estudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V\Ventana_registro.resx">
       <DependentUpon>Ventana_registro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="V\Ventana_responder_cuestionario.resx">
-      <DependentUpon>Ventana_responder_cuestionario.cs</DependentUpon>
+    <EmbeddedResource Include="V\Ventana_comenzar_estudio.resx">
+      <DependentUpon>Ventana_comenzar_estudio.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
